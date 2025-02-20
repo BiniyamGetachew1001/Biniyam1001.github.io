@@ -283,8 +283,16 @@
         </ul>
         <p class="copyright">&copy; 2024 | Designed by Biniyam Getachew</p>
     </div>
+    <script>
+        window.addEventListener('load', function() {
+            document.getElementById('loading-overlay').style.display = 'none';
+        });
+    </script>
     <script src="assets/loading.js"></script>
-    <script src="assets/loading-dots.js"></script>
-    <script src="assets/loading-animation.js"></script>
-</footer>
+    <script src="assets/popups.js"></script>
+    <!-- Live Activity Script -->
+    <script src="assets/activity.js"></script>
+    <!-- Live Activity Container -->
+    <div id="live-activity" class="live-activity-widget"></div>
+</body>
 </html>

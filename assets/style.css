@@ -1130,3 +1130,47 @@ img, video {
     color: var(--text-color);
     font-weight: bold;
 }
+
+/* Lazy Loading Styles */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-loaded {
+    opacity: 1;
+}
+
+/* Live Activity Widget */
+.live-activity-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 300px;
+    background: linear-gradient(45deg, #080808, #0096FF);  /* Matched to website colors */
+    color: var(--text-color);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-size: 1.2rem;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out;
+    overflow: hidden;
+}
+
+/* Subtle slide-in animation for activity messages */
+@keyframes slideInActivity {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.live-activity-item {
+    animation: slideInActivity 0.5s ease-out;
+    margin-bottom: 5px;
+}

@@ -11,6 +11,34 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.remove('active');
         }
     });
+
+    // Lazy loading for images and videos
+    const lazyElements = document.querySelectorAll('img.lazy, video.lazy');
+    const lazyLoad = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                if (element.tagName === 'IMG') {
+                    element.src = element.dataset.src;
+                } else if (element.tagName === 'VIDEO') {
+                    element.src = element.dataset.src;
+                    element.poster = element.dataset.poster;
+                }
+                element.classList.remove('lazy');
+                element.classList.add('lazy-loaded');
+                observer.unobserve(element);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(lazyLoad, {
+        rootMargin: '0px 0px 50px 0px',
+        threshold: 0.01
+    });
+
+    lazyElements.forEach(element => {
+        observer.observe(element);
+    });
 });
 
 window.addEventListener('load', function() {
