@@ -6,10 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/loading.css">
+    <link rel="stylesheet" href="assets/loading-dots.css">
+    <link rel="stylesheet" href="assets/loading-animation.css">
     <title>Protfolio Website</title>
 </head>
 
 <body>
+<!-- Full-Screen Loading Animation -->
+<div id="loading-overlay">
+    <div class="loader">
+        <div class="cube">
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="right"></div>
+            <div class="left"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+</div>
+<!-- Loading Animation -->
+<div class="loader">
+    <div class="cube">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="right"></div>
+        <div class="left"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+</div>
+<!-- Loading Animation -->
+<div class="loader-dots">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
 <!-- Header Section -->
 
 <header class="header">
@@ -42,7 +75,7 @@
 <!-- About Me Section -->
 <section class="about" id="about">
     <div class="about-img">
-        <img src="assets/profile/BININNYAM.png" alt="About Image">
+        <img src="assets/profile/BININNYAM.png" alt="About Image" loading="lazy">
     </div>
 
     <div class="about-content">
@@ -79,7 +112,7 @@
         <div class="service-box">
             <div class="service-info">
                 <h4>Video Edits</h4>
-                <video class="service-video" controls poster="assets/thumbnails/maxresdefault_10.jpg" onmouseover="this.play()" onmouseout="this.pause()">
+                <video class="service-video" controls preload="none" poster="assets/thumbnails/maxresdefault_10.jpg" onmouseover="this.play()" onmouseout="this.pause()">
                     <source src="assets/videos/portfolio(1).mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -89,7 +122,7 @@
         <div class="service-box">
             <div class="service-info">
                 <h4>VFX</h4>
-                <video class="service-video" controls poster="assets/thumbnails/e7b2d0f585841818f9dce6ffc2e6b985.jpg" onmouseover="this.play()" onmouseout="this.pause()">
+                <video class="service-video" controls preload="none" poster="assets/thumbnails/e7b2d0f585841818f9dce6ffc2e6b985.jpg" onmouseover="this.play()" onmouseout="this.pause()">
                     <source src="assets/videos/Final BAckround video for portfolio(1).mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -99,7 +132,7 @@
         <div class="service-box">
             <div class="service-info">
                 <h4>Motion Graphics</h4>
-                <video class="service-video" controls poster="assets/thumbnails/maxresdefault_11.jpg" onmouseover="this.play()" onmouseout="this.pause()">
+                <video class="service-video" controls preload="none" poster="assets/thumbnails/maxresdefault_11.jpg" onmouseover="this.play()" onmouseout="this.pause()">
                     <source src="assets/videos/Motion Graphics.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -109,7 +142,7 @@
         <div class="service-box">
             <div class="service-info">
                 <h4>Photoshop</h4>
-                <video class="service-video" controls poster="assets/thumbnails/maxresdefault_13.jpg" onmouseover="this.play()" onmouseout="this.pause()">
+                <video class="service-video" controls preload="none" poster="assets/thumbnails/maxresdefault_13.jpg" onmouseover="this.play()" onmouseout="this.pause()">
                     <source src="assets/videos/photoshop showreel(1).mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -130,18 +163,18 @@
         <div class="banner" style="margin-top: 200px;"> <!-- Adjusted position -->
             <div class="slider" style="--quantity: 12"> <!-- Updated quantity -->
                 <!-- Repeated Images for the 3D slider -->
-                <div class="item" style="--position: 1"><img src="assets/polo_tshirt_21.png" alt="Mark's Testimonial"></div>
-                <div class="item" style="--position: 2"><img src="assets/fasiledes.png" alt="Steve's Testimonial"></div>
-                <div class="item" style="--position: 3"><img src="assets/omo.png" alt="Devid's Testimonial"></div>
-                <div class="item" style="--position: 4"><img src="assets/selam.png" alt="Mark's Testimonial"></div>
-                <div class="item" style="--position: 5"><img src="assets/textured girl.png" alt="Steve's Testimonial"></div>
-                <div class="item" style="--position: 6"><img src="assets/9758856.png" alt="Devid's Testimonial"></div>
-                <div class="item" style="--position: 7"><img src="assets/girl.png" alt="Mark's Testimonial"></div>
-                <div class="item" style="--position: 8"><img src="assets/golden check.png" alt="Steve's Testimonial"></div>
-                <div class="item" style="--position: 9"><img src="assets/Golden girl 2.png" alt="Devid's Testimonial"></div>
-                <div class="item" style="--position: 10"><img src="assets/yesat Erat.png" alt="Mark's Testimonial"></div>
-                <div class="item" style="--position: 11"><img src="assets/omimi.png" alt="Steve's Testimonial"></div>
-                <div class="item" style="--position: 12"><img src="assets/green.png" alt="Devid's Testimonial"></div>
+                <div class="item" style="--position: 1"><img src="assets/polo_tshirt_21.png" alt="Mark's Testimonial" loading="lazy"></div>
+                <div class="item" style="--position: 2"><img src="assets/fasiledes.png" alt="Steve's Testimonial" loading="lazy"></div>
+                <div class="item" style="--position: 3"><img src="assets/omo.png" alt="Devid's Testimonial" loading="lazy"></div>
+                <div class="item" style="--position: 4"><img src="assets/selam.png" alt="Mark's Testimonial" loading="lazy"></div>
+                <div class="item" style="--position: 5"><img src="assets/textured girl.png" alt="Steve's Testimonial" loading="lazy"></div>
+                <div class="item" style="--position: 6"><img src="assets/9758856.png" alt="Devid's Testimonial" loading="lazy"></div>
+                <div class="item" style="--position: 7"><img src="assets/girl.png" alt="Mark's Testimonial" loading="lazy"></div>
+                <div class="item" style="--position: 8"><img src="assets/golden check.png" alt="Steve's Testimonial" loading="lazy"></div>
+                <div class="item" style="--position: 9"><img src="assets/Golden girl 2.png" alt="Devid's Testimonial" loading="lazy"></div>
+                <div class="item" style="--position: 10"><img src="assets/yesat Erat.png" alt="Mark's Testimonial" loading="lazy"></div>
+                <div class="item" style="--position: 11"><img src="assets/omimi.png" alt="Steve's Testimonial" loading="lazy"></div>
+                <div class="item" style="--position: 12"><img src="assets/green.png" alt="Devid's Testimonial" loading="lazy"></div>
             </div>
         </div>
     </div>
@@ -250,6 +283,8 @@
         </ul>
         <p class="copyright">&copy; 2024 | Designed by Biniyam Getachew</p>
     </div>
-    <!-- Added back-to-top button -->
-    <div class="back-to-top"><i class='bx bx-up-arrow-alt'></i></div>
+    <script src="assets/loading.js"></script>
+    <script src="assets/loading-dots.js"></script>
+    <script src="assets/loading-animation.js"></script>
 </footer>
+</html>

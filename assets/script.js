@@ -18,6 +18,13 @@ window.addEventListener('load', function() {
     images.forEach(img => {
         img.loading = 'lazy';
     });
+    // Lazy load non-autoplay videos:
+    const videos = document.querySelectorAll('video:not([autoplay])');
+    videos.forEach(video => {
+        video.preload = 'none';
+    });
+    const loading = document.getElementById('loading');
+    loading.style.display = 'none';
 });
 
 let sections = document.querySelectorAll('section');
