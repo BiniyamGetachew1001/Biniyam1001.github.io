@@ -282,7 +282,7 @@ span {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--main-color);
+    color: var (--main-color);
 }
 
 .about-content p {
@@ -556,9 +556,9 @@ span {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    margin: 5rem auto;
+    gap: 1rem;
     text-align: center;
+    margin: 1rem auto;
 }
 
 .contact form .input-box {
@@ -570,13 +570,13 @@ span {
 .contact form .input-box input,
 .contact form textarea {
     width: 100%;
-    padding: 2.5rem;
+    padding: 2rem;
     font-size: 1.8rem;
     color: var(--text-color);
     background-color: var(--bg-color);
     border-radius: 2rem;
     border: 2px solid var(--main-color);
-    margin: 1.5rem 0;
+    margin: 0.5rem 0;
     resize: none;
 }
 
@@ -587,7 +587,7 @@ span {
     color: #fff;
     background-color: var(--main-color);
     border: none;
-    border-radius: 3rem;
+    border-radius: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 0 10px var(--main-color), 0 0 20px var(--main-color), 0 0 30px var(--main-color); /* Glow effect */
@@ -622,6 +622,12 @@ span {
     .contact form {
         width: 100%; /* Full width on small screens */
         padding: 0 2rem; /* Add padding to prevent touching screen edges */
+    }
+    /* Ensure both map and contact form match in width and are centered */
+    .contact form,
+    .map {
+        width: 75%;
+        margin: 0 auto;
     }
 }
 
@@ -1173,4 +1179,25 @@ img, video {
 .live-activity-item {
     animation: slideInActivity 0.5s ease-out;
     margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    /* Reposition social icons to the right */
+    .social-icons {
+        left: auto;
+        right: 1rem;
+        bottom: 15rem;  /* Adjust as needed */
+    }
+    /* Reposition button group to the right */
+    .btn-group {
+        left: auto;
+        right: 1rem;
+        bottom: 1rem;
+    }
+    
+    /* Adjust home section height and padding for small screens */
+    section {
+        min-height: 50vh;
+        padding: 2rem 3%;
+    }
 }
